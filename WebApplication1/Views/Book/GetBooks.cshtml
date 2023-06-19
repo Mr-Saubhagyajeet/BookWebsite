@@ -1,0 +1,35 @@
+﻿@using BookStoreApplicationOriginal.Models;
+@model BooksModel
+@{
+    ViewData["Title"] = "Books";
+}
+
+<div class="container">
+    <div class="py-4">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="card-img pt-2" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" src="@Model.ImagePath" alt="Thumbnail [100%x100%]" style="height:500px; width: 500px; display: block;" data-holder-rendered="true">
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="h1">@Model.Title</h1>
+                        <div class="row">
+                            <div class="col-md-6 text-primary small">
+                                <p>@Model.Author</p>
+                            </div>
+                            <div class="text-end fw-bold col-md-6">
+                                <p>Rs @Model.Amount</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-muted">
+                        <p>
+                            @Model.Description
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
