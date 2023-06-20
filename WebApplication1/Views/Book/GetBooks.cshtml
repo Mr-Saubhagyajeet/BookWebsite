@@ -4,8 +4,12 @@
     ViewData["Title"] = "Books";
 }
 
+
 <div class="container">
     <div class="py-4">
+        <div class="col-md-12">
+            <a class="bi bi-arrow-left-short text-decoration-none" asp-controller="Book" asp-action="AllBooks">Back</a>
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <img class="card-img pt-2" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" src="@Model.ImagePath" alt="Thumbnail [100%x100%]" style="height:500px; width: 500px; display: block;" data-holder-rendered="true">
@@ -27,6 +31,11 @@
                         <p>
                             @Model.Description
                         </p>
+                    </div>
+                    <div class="col-md-12">
+                        <a class="text-center btn btn-success">
+                            Buy Now
+                        </a>
                     </div>
                 </div>
             </div>
